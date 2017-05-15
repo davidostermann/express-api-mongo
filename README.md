@@ -24,6 +24,10 @@ du coup, on peut appeler directement
 mongoose.connect(process.env.DATABASE);
 ``` 
 
+## Utiliser 'exports' au lieu de module.exports quand il y a plusieurs elements à exporter
+
+Modifions les controllers
+
 ## Dire à Mongoose d’utiliser les Promise d’es6 
 ```
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
