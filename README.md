@@ -27,11 +27,7 @@ mongoose.connect(process.env.DATABASE);
 ## Utiliser 'exports' au lieu de module.exports quand il y a plusieurs elements à exporter
 
 C'est le même que export et export default avec les modules es6
-
-## Dire à Mongoose d’utiliser les Promise d’es6 
-```
-mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
-```
+Vous pouvez donc utiliser le destructuring es6 si besoin.
 
 ## Middleware on specified routes
 
@@ -66,6 +62,17 @@ router.get('/account', authController.isLoggedIn, userController.account);
 ``` 
 où authController.isLoggedIn is a middleware
 
+## MONGOOSE
+
+### Dire à Mongoose d’utiliser les Promise d’es6 
+```
+mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
+```
+
+### Utilser trim
+
+### Specifier une erreur sur le 'required'
+
 
 ## locals
 
@@ -87,3 +94,5 @@ On peut aussi les injecter dans app pour y avoir acces à tous moments (dans la 
 http://expressjs.com/fr/4x/api.html#app.locals
 
 ## promisify
+
+
