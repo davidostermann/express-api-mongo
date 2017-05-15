@@ -73,6 +73,18 @@ mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 
 3. Specifier une erreur sur le 'required'
 
+4. utiliser pre.
+
+5. utiliser post('save', (err, ...
+
+6. utiliser les promise
+
+7. utiliser async await (!!! ajouter un parserOptions à ecmascript 8)
+
+8. utiliser async await avec un try catch
+
+9. utiliser async await avec un higher order function to catch errors
+
 ## locals
 
 On utilise un middleware pour injecter les données dans la response
