@@ -64,15 +64,14 @@ où authController.isLoggedIn is a middleware
 
 ## MONGOOSE
 
-### Dire à Mongoose d’utiliser les Promise d’es6 
+1. Dire à Mongoose d’utiliser les Promise d’es6 
 ```
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 ```
 
-### Utilser trim
+2. Utilser trim
 
-### Specifier une erreur sur le 'required'
-
+3. Specifier une erreur sur le 'required'
 
 ## locals
 
