@@ -7,20 +7,7 @@ SDW-3A 16/05/2017
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 ```
 
-## locals
-
-```
-// pass variables to our templates + all requests
-app.use((req, res, next) => {
-  res.locals.h = helpers;
-  res.locals.flashes = req.flash();
-  res.locals.user = req.user || null;
-  res.locals.currentPath = req.path;
-  next();
-});
-``` 
-
-## Mi!ddleware on specified routes
+## Middleware on specified routes
 
 #### Déclaration de middleware
 ``` 
@@ -34,10 +21,30 @@ exports.isLoggedIn = (req, res, next) => {
   res.redirect('/login');
 };
 ```
+Execution de middleware sur un router (toutes les route liées au router sont concernées
+``` 
+router.use(authController.isLoggedIn);
+``` 
 Execution de middleware sur une route specifique
 ``` 
 router.get('/account', authController.isLoggedIn, userController.account);
 ``` 
 où authController.isLoggedIn is a middleware
+
+
+## locals
+
+On utilise un middleware pour injecter les données dans la response
+
+```
+// pass variables to our templates + all requests
+app.use((req, res, next) => {
+  res.locals.h = helpers;
+  res.locals.flashes = req.flash();
+  res.locals.user = req.user || null;
+  res.locals.currentPath = req.path;
+  next();
+});
+``` 
 
 ## promisify
