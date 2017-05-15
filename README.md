@@ -2,12 +2,12 @@
 
 SDW-3A 16/05/2017
 
-1. Dire à Mongoose d’utiliser les Promise d’es6 
+## Dire à Mongoose d’utiliser les Promise d’es6 
 ```
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 ```
 
-2. locals
+## locals
 
 ```
 // pass variables to our templates + all requests
@@ -20,9 +20,9 @@ app.use((req, res, next) => {
 });
 ``` 
 
-3. Mi!ddleware on specified routes
+## Mi!ddleware on specified routes
 
-Déclaration de middleware
+#### Déclaration de middleware
 ``` 
 exports.isLoggedIn = (req, res, next) => {
   // first check if the user is authenticated
@@ -40,6 +40,4 @@ router.get('/account', authController.isLoggedIn, userController.account);
 ``` 
 où authController.isLoggedIn is a middleware
 
-
-
-3. promisify
+## promisify
