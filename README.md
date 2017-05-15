@@ -2,6 +2,28 @@
 
 SDW-3A 16/05/2017
 
+## Utiliser dotenv ou node-foreman
+
+``` 
+npm i -D dotenv
+```
+
+.env
+``` 
+NODE_ENV=development
+DATABASE=mongodb://localhost:27017/kickass
+```
+
+dans index.js
+``` 
+if (process.env.NODE_ENV !== 'production') require('dotenv').config()
+``` 
+
+du coup, on peut appeler directement
+``` 
+mongoose.connect(process.env.DATABASE);
+``` 
+
 ## Dire à Mongoose d’utiliser les Promise d’es6 
 ```
 mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
