@@ -85,6 +85,12 @@ mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 
 9. utiliser async await avec un higher order function to catch errors
 
+10. gestion des errors :
+  
+  * RateSchema.post ...
+  * catchErros sur async
+  * Error handler middlerware
+
 ## locals
 
 On utilise un middleware pour injecter les données dans la response
