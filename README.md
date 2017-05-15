@@ -20,4 +20,26 @@ app.use((req, res, next) => {
 });
 ``` 
 
+3. Mi!ddleware on specified routes
+
+Déclaration de middleware
+``` 
+exports.isLoggedIn = (req, res, next) => {
+  // first check if the user is authenticated
+  if (req.isAuthenticated()) {
+    next(); // carry on! They are logged in!
+    return;
+  }
+  req.flash('error', 'Oops you must be logged in to do that!');
+  res.redirect('/login');
+};
+```
+Execution de middleware sur une route specifique
+``` 
+router.get('/account', authController.isLoggedIn, userController.account);
+``` 
+où authController.isLoggedIn is a middleware
+
+
+
 3. promisify
