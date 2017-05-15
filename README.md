@@ -35,6 +35,7 @@ où authController.isLoggedIn is a middleware
 ## locals
 
 On utilise un middleware pour injecter les données dans la response
+http://expressjs.com/fr/4x/api.html#res.locals
 
 ```
 // pass variables to our templates + all requests
@@ -46,5 +47,8 @@ app.use((req, res, next) => {
   next();
 });
 ``` 
+On peut aussi les injecter dans app pour y avoir acces à tous moments (dans la request et dans l'app)
+
+http://expressjs.com/fr/4x/api.html#app.locals
 
 ## promisify
