@@ -10,6 +10,15 @@ mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 ## Middleware on specified routes
 
 #### Déclaration de middleware
+
+Un middleware se place entre la request et la response. Les middleware sont executés de façon sequentiel au même titre que  les routes (les uns après les autres).
+
+On va, par exemple, : 
+- vérifier que l'utilisateur est authentifié en amont des routes privées afin de le rediriger, si besoin, vers le login
+- intercepter toutes les erreurs après les routes
+
+Pour le developpement, on peut utiliser le package https://github.com/expressjs/errorhandler pour avoir le stack d'execution. 
+
 ``` 
 exports.isLoggedIn = (req, res, next) => {
   // first check if the user is authenticated
@@ -21,7 +30,7 @@ exports.isLoggedIn = (req, res, next) => {
   res.redirect('/login');
 };
 ```
-Execution de middleware sur un router (toutes les route liées au router sont concernées
+Execution de middleware sur un router (toutes les routes liées au router sont concernées)
 ``` 
 router.use(authController.isLoggedIn);
 ``` 
