@@ -26,7 +26,7 @@ mongoose.connect(process.env.DATABASE);
 
 ## Utiliser 'exports' au lieu de module.exports quand il y a plusieurs elements à exporter
 
-Modifions les controllers
+C'est le même que export et export default avec les modules es6
 
 ## Dire à Mongoose d’utiliser les Promise d’es6 
 ```
