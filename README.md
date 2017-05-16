@@ -90,6 +90,8 @@ mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
   * RateSchema.post ...
   * catchErros sur async
   * Error handler middlerware
+  
+ 11. aggregation
 
 ## locals
 
