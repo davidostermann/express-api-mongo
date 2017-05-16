@@ -1,0 +1,39 @@
+{
+  "name": "sdw3a-react-exam2-support",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidostermann/sdw3a-react-exam2-support.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidostermann/sdw3a-react-exam2-support/issues"
+  },
+  "homepage": "https://github.com/davidostermann/sdw3a-react-exam2-support#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "errorhandler": "^1.5.0",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.6",
+    "mongoose-error": "^1.0.1",
+    "mongoose-mongodb-errors": "0.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-destructuring": "^2.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
