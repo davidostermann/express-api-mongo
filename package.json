@@ -1,5 +1,5 @@
 {
-  "name": "sdw3a-react-exam2-support",
+  "name": "express-api-mongo",
   "version": "1.0.0",
   "description": "",
   "main": "./server/index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidostermann/sdw3a-react-exam2-support.git"
+    "url": "git+https://github.com/davidostermann/express-api-mongo.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/davidostermann/sdw3a-react-exam2-support/issues"
+    "url": "https://github.com/davidostermann/express-api-mongo/issues"
   },
-  "homepage": "https://github.com/davidostermann/sdw3a-react-exam2-support#readme",
+  "homepage": "https://github.com/davidostermann/express-api-mongo#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "errorhandler": "^1.5.0",
